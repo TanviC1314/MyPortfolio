@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewportdraw" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img style="margin-top: -5px;margin-bottom: 10px; padding-bottom: 5px;" src="images/avatar.png"
+            alt="Tanvi Chiman" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Tanvi Chiman">Tanvi Chiman</h1>
+
+          <p class="burst-effect title">Web developer</p>
+          <p class="burst-effect title">Full Stack Developer</p>
+          <p class="burst-effect title">App developer</p>
+          <p class="burst-effect title">Software Developer</p>
+
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon class="burst-effect" name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box " >
+              <ion-icon class="burst-effect" name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info ">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">tanvivchiman@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon class="burst-effect" name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a class="contact-link">+91 9372195515</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon class="burst-effect" name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">November 14, 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon class="burst-effect" name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Mulund, Mumbai, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/tanvi-chiman-9486691bb/" class="social-link">
+              <img width="17px" src="images/linkedin.png">
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/TanviC1314/" class="social-link">
+              <img width="23px" src="images/github.png">
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <img width="20px" src="images/snapchat.png">
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list deco">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link download-btn" onclick="downloadCV()">
+              <!-- <span>Download CV</span> -->
+              <svg class="download-icon"  width="20" height="20">
+                <path fill="none" d="M0 0h24v24H0z"/>
+                <path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      
+      <style>
+      .download-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border: none;
+
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      
+      .download-btn:hover {
+        color: #7fade1;
+        transform: translateY(-2px);
+      }
+      
+      .download-icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        transition: transform 0.3s ease;
+      }
+      
+      .download-btn:hover .download-icon {
+        animation: downloadAnimation 1s infinite;
+      }
+      
+      @keyframes downloadAnimation {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(4px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .download-btn {
+          padding: 6px 12px;
+        }
+        
+        .download-btn span {
+          display: none;
+        }
+        
+        .download-icon {
+          margin: 0;
+        }
+      }
+      </style>
+      
+      <script>
+      function downloadCV() {
+        var link = document.createElement('a');
+        link.href = 'cv.pdf';
+        link.download = 'TanviChiman_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      </script>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section style="text-align: justify;
+  text-justify: inter-word; margin-right: 8px;" class="about-text">
+          <p>
+            As a passionate student pursuing a degree in computer engineering, I am eager to expand my knowledge and
+            skills while leveraging technology to solve complex business problems. With a strong foundation in
+            programming and problem-solving, I am driven to explore innovative solutions and embrace new challenges.
+            Committed to continuous learning and growth, I am determined to make a positive impact in the field of
+            computer engineering
+          </p>
+          <section class="service">
+
+            <h3 class="h3 service-title">What I'm doing</h3>
+
+            <ul class="service-list">
+
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="/images/calculator.png" alt="design icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web design</h4>
+
+                  <p class="service-item-text">
+                    The most modern and high-quality design made at a professional level.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="/images/website.png" alt="Web development icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+
+                  <p class="service-item-text">
+                    High-quality development of sites at the professional level.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="/images/mobile.png" alt="mobile app icon" width="40">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                  <p class="service-item-text">
+                    Professional development of applications for iOS and Android.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-icon-box">
+                  <img src="/images/design.png" alt="paint icon" width="35">
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">UX/UI Designer</h4>
+
+                  <p class="service-item-text">
+                    Designing interactive, look, and feel of a product screen & web page  
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+              <section class="about-text">
+                <header>
+                  <h2 class="h2 article-title">My Achievements</h2>
+                </header>
+                <div class="achievements-container">
+                  <ol class="timeline-list achievement-list">
+                    <li class="timeline-item achievement-item">
+                      MERN Stack Internship (Completed)
+                    </li>
+
+                  <li class="timeline-item achievement-item">
+                <a href="https://www.codechef.com/users/tanvic" class="deco">Code Chef</a>: Global Rank - 135642, Won 5
+                batches in CodeChef
+              </li>
+
+                <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1JrNkJYNAHk1ZfXfC1VcAsxKqg4D68xGB/view" class="deco">PAPER
+                  WINGS - 2021 </a> (Semi-Finalist)
+              </li>
+
+                  <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1OMAzOx2S_Ly7skDnA3tI-UL6NCTJYNgk/view" class="deco">9th
+                  Techno-Gurupoornima Online Project Competition</a> (Winner)
+
+              </li>
+
+                  <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/14-eYFjGOjhNvAz7ZJ6yisncu70stBruP/view" class="deco">NASA
+                  Galactic Problem Solver </a> - (Pre-Qualifier)
+
+              </li>
+
+                  <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/10dpZzDTSBo91cyzYkznV5jKL0Lnuz09I/view" class="deco">Internship
+                  - </a>Grearing up with Virtual Internship Program
+
+              </li>
+                <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1GHeFwKclKwFh4NTjzy3t3ok-Wtc6_1Eh/view" class="deco">Online
+                  Course</a> - Master the Coding Interview: Data Structures + Algorithms, 100 Days of Code: The Complete
+                Python Pro Bootcamp for 2023, The Complete Flutter Development Bootcamp with Dart, The Web Developer
+                Bootcamp 2023, Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus [2023]
+
+              </li>
+
+            </ol>
+
+
+
+
+            </p>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+          <div class="modal-container" data-modal-container>
+
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon class="burst-effect" name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+
+
+
+
+
+
+              </div>
+
+            </section>
+
+          </div>
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon class="burst-effect" name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list achievement-list">
+            <li class="timeline-item achievement-item">
+
+              <h4 class="h4 timeline-item-title">B-Tech in Computer Engineering (Pursuing)</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+
+                Shah & Anchor Kutchhi Engineering College, Chembur
+              </p>
+
+            </li>
+
+           
+                <li class="timeline-item achievement-item">
+
+              <h4 class="h4 timeline-item-title">Diploma in Information Technology</h4>
+
+              <span>2019 — 2022</span>
+
+              <p class="timeline-text">
+
+                Vidya Prasarak Mandal Polytechnic, Thane
+              </p>
+
+            </li>
+           
+              <li class="timeline-item achievement-item">
+
+              <h4 class="h4 timeline-item-title">High School</h4>
+
+              <span>2007 — 2019</span>
+
+              <p class="timeline-text">
+                S.T. Marys Convent High School,Mulund
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon class="burst-effect" name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Projects</h3>
+          </div>
+
+          <!-- <section style="text-align: justify;
+  text-justify: inter-word; margin-right: 8px;" class="about-text">
+            <p>
+            <ol class="timeline-list achievement-list">
+              <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1eYzLFWjHr1hFJvIaCNx96Gb-EowEUoPO/view" class="deco">Budget
+                  List (Android app)</a> - The main motive of this app is to provide a platform to keep track on the
+                expenses of the user
+              </li>
+
+              <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1BpVIhNBTRAvvw1TOoSSbu7XDZUtHz1Yy/view" class="deco">QuizOmania
+                  (React Native app) </a> - Quiz application, which contains quiz from diffrent categories, obtained
+                using TDB.
+              </li>
+
+            <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/13zXq0-uOZbzwKUKhek3TKgbohSBJHP7F/view" class="deco">Adventure
+                  Story (Android app, Web App, Python)</a> - Adventure Story is a fun game app that helps users to make
+                logical decisions and based on the decision story will move ahead
+              </li>
+
+            <li class="timeline-item achievement-item">
+                <a href="https://replit.com/@Tanvi1314/slam-book#next.html" class="deco">Slam Book (Web App/Website)</a>
+                - It's a fun website that is a virtual copy of a slam book to collect Information about other friends
+                and store them as memory
+
+              </li>
+            <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1wdtn2GYc2BK_EuVDfXtil35mhPFe3NbC/viewl" class="deco">To-Do App
+                  (Python Django)</a> - To do app helps to maintain a to do list and keep track on your task performed
+
+              </li>
+                <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1cQd4sO-2bismylEn4o8lq5AADcVlnDV9/view" class="deco">Office
+                  Employee Management (Python Django)</a> - This project helps in maintaining the records of the
+                employee and performs CRUD operation
+
+              </li>
+            <li class="timeline-item achievement-item">
+                <a href="https://drive.google.com/file/d/1NDe92WTs4DWz1Ecd6PzUBwmnlKfPpgXM/view" class="deco">Travel
+                  Management (Software using Java Applet) </a> - This project performs crud operations to store the data
+                and even help in secure operations
+
+              </li>
+            <li class="timeline-item achievement-item">
+                <a href="https://tanvichiman.blogspot.com/?zx=1612d4537310152f" class="deco">Blog</a>
+
+              </li>
+            </ol>
+
+
+
+
+
+
+            </p>
+
+
+          </section> -->
+          <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+              <img src="images/ayurveda.png" height="200"width="300" alt="Project 1 Preview">
+              <h3>Ayurved Service Website</h3>
+              <p>Designed and developed a cutting-edge Ayurved Service website, integrating modern aesthetics with traditional Ayurvedic principles. A responsive design, ensuring a seamless user experience across all devices</p>
+              <div class="button-group">
+                <a href="https://tanvic1314.github.io/Ayurved-Service-Website-/" class="btn btn-demo">Demo</a>
+                <a href="https://github.com/TanviC1314/Ayurved-Service-Website-" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+              <img src="images/home.png" height="200"width="300" alt="Project 2 Preview">
+              <h3>Home Appliance Servive Website</h3>
+              <p>Created a user-friendly website for a home appliance service, featuring an intuitive interface, service booking functionality, and responsive design to enhance customer experience.</p>
+              <div class="button-group">
+                <a href="https://tanvic1314.github.io/Home-appliance-servive-Website/" class="btn btn-demo">Demo</a>
+                <a href="https://github.com/TanviC1314/Home-appliance-servive-Website" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+              <img src="images/ivs.png" height="200"width="300" alt="Project 3 Preview">
+              <h3>IVS (NGO website)</h3>
+              <p>Developed a responsive website for an NGO focused on providing affordable world-class education across India, featuring dynamic content, modern UI/UX, and seamless user interactions.</p>
+              <div class="button-group">
+                <a href="https://tanvic1314.github.io/IVS/index.html" class="btn btn-demo">Demo</a>
+                <a href="https://github.com/TanviC1314/IVS" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+             <!-- Project Card 4 -->
+             <div class="project-card">
+              <img src="images/333s.png" height="200"width="300" alt="Project 4 Preview">
+              <h3>333 Cake Avenue Website</h3>
+              <p>Designed the 333 Cake Avenue website to be elegant and user-friendly, showcasing their delicious cakes with stunning visuals and an intuitive layout that makes ordering a breeze.</p>
+              <div class="button-group">
+                <a href="https://tanvic1314.github.io/333cakeavenue/" class="btn btn-demo">Demo</a>
+                <a href="https://github.com/TanviC1314/333cakeavenue" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+             <!-- Project Card 5 -->
+             <div class="project-card">
+              <img src="images/AIML.jpeg" height="200"width="300" alt="Project 5 Preview">
+              <h3>Smart disease prediction system</h3>
+              <p>The Smart Disease Prediction System (SDPS) represents a significant leap forward in healthcare 
+                technology, aiming to revolutionize disease prediction</p>
+              <div class="button-group">
+                <a href="https://github.com/TanviC1314/Smart-disease-prediction-system" class="btn btn-demo">Demo</a>
+                <a href="https://github.com/TanviC1314/Smart-disease-prediction-system" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+             <!-- Project Card 6 -->
+             <div class="project-card">
+              <img src="images/suvidha.jpg" height="200"width="300" alt="Project 6 Preview">
+              <h3>Suvidha Overseas Website</h3>
+              <p>Developed a professional website for Suvidha Overseas, highlighting their services and facilitating user engagement through a clean, responsive design and easy navigation.</p>
+              <div class="button-group">
+                <a href="https://suvidhaoverseas.org/" class="btn btn-demo">Demo</a>
+                <a href="#" class="btn btn-fork">
+                  <ion-icon name="git-branch-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+             
+
+
+
+          </div>
+
+
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">WEB Development</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" data-target="90"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">App design</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" data-target="80"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" data-target="50"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Data Structure</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" data-target="70"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60296.05075892233!2d72.9578561!3d19.173213099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1696517868083!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form name="submit-to-google-sheet" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" onclick="myFunction()" type="submit" name="submit">
+              <ion-icon style="color: white;" class="burst-effect" name="paper-plane"></ion-icon>
+              <span style="color: white;">Send Message</span>
+            </button>
+
+          </form>
+
+          <script>
+            function myFunction() {
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbzLddMXweXR-39CtSJOxxzlCn_z2bWYa8cvfTbmN7GxxAvOpGnl4n1pa-AbXL3ShgauwA/exec'
+              const form = document.forms['submit-to-google-sheet']
+
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, {method: 'POST', body: new FormData(form)})
+                  .then(response => console.log('Success!', response) )
+                  .catch(error => console.error('Error!', error.message))
+              })
+              location.reload()
+            }
+
+
+          </script>
+
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <button class="filter-select" data-select>
+
+          </button>
+
+        </section>
+
+      </article>
+
+
+
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
